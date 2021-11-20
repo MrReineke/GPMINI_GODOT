@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pepSound3.ogg-c34c9452528b6cd5f9b270f1a4097c72.oggstr"
+
+[deps]
+
+source_file="res://SFX/kenney_digitalSFX/pepSound3.ogg"
+dest_files=[ "res://.import/pepSound3.ogg-c34c9452528b6cd5f9b270f1a4097c72.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

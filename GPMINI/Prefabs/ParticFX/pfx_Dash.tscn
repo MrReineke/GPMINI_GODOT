@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/DestroyParticFX.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/FX/sprDashParticle.png" type="Texture" id=2]
+[ext_resource path="res://SFX/49693__ejfortin__energy-gloves.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/RandomPitch.gd" type="Script" id=4]
+
+[sub_resource type="Curve" id=4]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 111.273 ), 0.0, 0.0, 0, 0, Vector2( 1, -58.9091 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, -0.234991, 0, 0, Vector2( 1, 0.0272727 ), -3.17806, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.4
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.24
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 1000.0
+damping_random = 0.55
+angle = 360.0
+angle_random = 1.0
+angle_curve = SubResource( 5 )
+scale_curve = SubResource( 2 )
+
+[node name="pfx_Dash" type="Particles2D"]
+show_behind_parent = true
+emitting = false
+amount = 16
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+script = ExtResource( 4 )

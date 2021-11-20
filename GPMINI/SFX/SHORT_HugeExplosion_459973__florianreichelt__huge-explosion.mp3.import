@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SHORT_HugeExplosion_459973__florianreichelt__huge-explosion.mp3-be5469595f74d5300edaa1328e727a60.mp3str"
+
+[deps]
+
+source_file="res://SFX/SHORT_HugeExplosion_459973__florianreichelt__huge-explosion.mp3"
+dest_files=[ "res://.import/SHORT_HugeExplosion_459973__florianreichelt__huge-explosion.mp3-be5469595f74d5300edaa1328e727a60.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/phaserDown3.ogg-ba5ff54038f3f2300b8cf1e09fcc73cc.oggstr"
+
+[deps]
+
+source_file="res://SFX/kenney_digitalSFX/phaserDown3.ogg"
+dest_files=[ "res://.import/phaserDown3.ogg-ba5ff54038f3f2300b8cf1e09fcc73cc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

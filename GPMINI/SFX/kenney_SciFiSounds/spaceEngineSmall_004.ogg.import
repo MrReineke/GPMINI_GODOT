@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spaceEngineSmall_004.ogg-8e1df1d521e83104b25a6a2ebfed3995.oggstr"
+
+[deps]
+
+source_file="res://SFX/kenney_SciFiSounds/spaceEngineSmall_004.ogg"
+dest_files=[ "res://.import/spaceEngineSmall_004.ogg-8e1df1d521e83104b25a6a2ebfed3995.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

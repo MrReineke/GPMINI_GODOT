@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/FX/sprCrateParticle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/DestroyParticFX.gd" type="Script" id=2]
+[ext_resource path="res://SFX/500900__bertsz__wood-crate-destory-3.wav" type="AudioStream" id=3]
+
+[sub_resource type="Curve" id=1]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.781022, 290.455 ), 0.0, 0.0, 0, 0, Vector2( 1, 293.727 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.875912, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -21.7437, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 0, -80, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 120.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 150.0
+damping_random = 0.2
+angle = 360.0
+angle_random = 1.0
+angle_curve = SubResource( 2 )
+scale_curve = SubResource( 4 )
+
+[node name="pfx_CratePlanks" type="Particles2D"]
+emitting = false
+amount = 6
+lifetime = 1.2
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource( 5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+autoplay = true

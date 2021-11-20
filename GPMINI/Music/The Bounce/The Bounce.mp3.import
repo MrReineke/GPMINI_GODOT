@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Bounce.mp3-86609c2536277c6965ed42706f98f721.mp3str"
+
+[deps]
+
+source_file="res://Music/The Bounce/The Bounce.mp3"
+dest_files=[ "res://.import/The Bounce.mp3-86609c2536277c6965ed42706f98f721.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

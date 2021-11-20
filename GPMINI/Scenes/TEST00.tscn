@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/CameraController.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/BG/Checker32_Used.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 1024.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="TestWalls" type="StaticBody2D" parent="YSort"]
+collision_mask = 14
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/TestWalls"]
+position = Vector2( 448, -89 )
+polygon = PoolVector2Array( 0, 0, 320, 0, 320, 64, 128, 64, 96, 32, 0, 32 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 480, 264 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+position = Vector2( 0, -48 )
+current = true
+zoom = Vector2( 2, 2 )
+script = ExtResource( 1 )
+camY = -80
+
+[node name="Crate" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 312, 136 )
+
+[node name="Crate2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 288, 144 )
+
+[node name="Crate3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 184 )
+
+[node name="Crate19" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 168 )
+
+[node name="Crate20" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 152 )
+
+[node name="Crate21" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 136 )
+
+[node name="Crate22" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 120 )
+
+[node name="Crate23" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 104 )
+
+[node name="Crate24" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 368, 88 )
+
+[node name="Crate4" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 456, 152 )
+
+[node name="Crate5" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 480, 168 )
+
+[node name="Crate6" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 448, 128 )
+
+[node name="Crate7" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 552, 168 )
+
+[node name="Crate8" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 528, 176 )
+
+[node name="Crate9" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 528, 200 )
+
+[node name="Crate10" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 696, 184 )
+
+[node name="Crate11" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 720, 200 )
+
+[node name="Crate12" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 688, 160 )
+
+[node name="Crate13" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 536, 88 )
+
+[node name="Crate14" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 512, 96 )
+
+[node name="Crate15" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 512, 120 )
+
+[node name="Crate16" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 680, 104 )
+
+[node name="Crate17" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 704, 120 )
+
+[node name="Crate18" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 672, 80 )
