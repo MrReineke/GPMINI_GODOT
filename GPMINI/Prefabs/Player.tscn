@@ -12,16 +12,16 @@
 [ext_resource path="res://Animations/anim_punch.tres" type="Animation" id=10]
 [ext_resource path="res://Sprites/Player/sprRetic.png" type="Texture" id=11]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=1]
 height = 10.0
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=2]
 height = 10.0
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8, 36 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 8, 60 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -30,7 +30,7 @@ script = ExtResource( 2 )
 
 [node name="MainPartColl" type="CollisionShape2D" parent="."]
 rotation = 1.5708
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="MainSprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -49,19 +49,19 @@ anims/anim_punch = ExtResource( 10 )
 anims/anim_spinCharge = ExtResource( 9 )
 
 [node name="Coll" type="CollisionShape2D" parent="FistRgt"]
-shape = SubResource( 9 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="CollShort" type="CollisionShape2D" parent="FistRgt"]
 visible = false
 position = Vector2( 0, -12 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="CollLong" type="CollisionShape2D" parent="FistRgt"]
 visible = false
 position = Vector2( 0, -28 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 disabled = true
 
 [node name="FistSpr" type="Sprite" parent="FistRgt"]
@@ -93,19 +93,19 @@ anims/anim_punch = ExtResource( 10 )
 anims/anim_spinCharge = ExtResource( 9 )
 
 [node name="Coll" type="CollisionShape2D" parent="FistLft"]
-shape = SubResource( 9 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="CollShort" type="CollisionShape2D" parent="FistLft"]
 visible = false
 position = Vector2( 0, -12 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="CollLong" type="CollisionShape2D" parent="FistLft"]
 visible = false
 position = Vector2( 0, -28 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 disabled = true
 
 [node name="FistSpr" type="Sprite" parent="FistLft"]

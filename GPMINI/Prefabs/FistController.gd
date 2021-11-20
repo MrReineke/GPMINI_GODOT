@@ -54,6 +54,7 @@ func punch(delta):
 	#charging distance
 	if punchPressed():
 		anim.play("anim_spinCharge") 
+		anim.playback_speed=(dist/maxDist)*2
 		Input.start_joy_vibration(0,dist/maxDist/2,0,.1)
 		
 		#sfx charge
