@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/CameraController.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/BG/Checker32_Used.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Crate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/SFXManager.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+
+[node name="SFXManager" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 1024.0

@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Gpmini"
+config/name="GP MINI"
 run/main_scene="res://Scenes/TEST00.tscn"
 config/icon="res://icon.png"
 

@@ -2,7 +2,9 @@ extends Particles2D
 
 onready var SFX = $SFX
 
+
 func _ready():
+
 	emitting=true
 	
 

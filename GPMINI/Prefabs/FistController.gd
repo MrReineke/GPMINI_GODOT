@@ -16,13 +16,14 @@ var minDist = 40
 var maxDist = 136
 var distCharge = 48 #how quickly the distance increase charges up
 
-onready var collShort = $CollShort
+#onready var collShort = $CollShort
 onready var coll = $Coll
 onready var anim = $AnimationPlayer
 export(Curve) var punchCurve
 var punchCurveOutput
 
 onready var retic = $Retic
+
 
 func _ready():
 	dist = minDist
@@ -36,8 +37,12 @@ func punchJustReleased():
 		dist = minDist
 
 func punch(delta):
+	
 	#Throwing a punch
 	if punchJustReleased():
+		if dist>=maxDist:
+			pass
+			
 		#anim.play("anim_punch")
 		anim.stop()
 		$FistSpr.frame=0

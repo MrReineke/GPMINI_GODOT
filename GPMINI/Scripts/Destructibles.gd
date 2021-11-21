@@ -1,16 +1,16 @@
 extends Area2D
 
 export var particFX = ""
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var SFX = 0
+var SFXM #sfx manager
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
+	if get_node("../../SFXManager") != null:
+		SFXM=get_node("../../SFXManager") 
+			
 	
 
 
@@ -20,11 +20,10 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
-	var scene = load("res://Prefabs/ParticFX/pfx_CratePlanks.tscn") #load(particFX)
-	#print(scene)
 	
 	gm.slowDown(.2,.04)
-	
+	SFXM.playSFX(SFX,-5,rand_range(.8,1.2))
+	var scene = load("res://Prefabs/ParticFX/pfx_CratePlanks.tscn") #load(particFX)
 	var scene_instance = scene.instance()
 	scene_instance.set_name("scene")
 	get_parent().add_child(scene_instance)
